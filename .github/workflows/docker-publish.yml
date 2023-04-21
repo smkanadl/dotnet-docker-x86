@@ -13,6 +13,16 @@ jobs:
     strategy:
       matrix:
         include:
+          - sdk: '3.1'
+            sdkFull: '3.1.426'
+            image: windowsservercore-ltsc2022
+            runner: windows-2022
+            build: true
+          - sdk: '5.0'
+            sdkFull: '5.0.408'
+            image: windowsservercore-ltsc2022
+            runner: windows-2022
+            build: true
           - sdk: '6.0'
             sdkFull: '6.0.408'
             image: windowsservercore-ltsc2019

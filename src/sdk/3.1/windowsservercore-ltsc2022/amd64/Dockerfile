@@ -13,7 +13,7 @@ RUN powershell -Command `
         ./dotnet-install.ps1 `
             -InstallDir '\Program Files (x86)\dotnet' `
             -Architecture x86 `
-            -Channel 3.1.4xx; `
+            -Channel 3.1; `
         Remove-Item -Force dotnet-install.ps1
 
 # SDK/runtime image

@@ -4,7 +4,7 @@ This repo aims to fill a gap in the [official Docker images](https://hub.docker.
 
 ## Disclaimer
 
-Images are published to ghcr.io/smkanadl/sdk. Use at your own risk!
+Images are published to ghcr.io/smkanadl/sdk. Use at your own risk! Dockerfiles are heavily inspired by the [official documentation](https://github.com/dotnet/dotnet-docker).
 
 ## Problems
 

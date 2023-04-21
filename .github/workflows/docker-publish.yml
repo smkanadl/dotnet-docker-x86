@@ -30,7 +30,7 @@ jobs:
             build: true
 
     runs-on: ${{ matrix.runner }}
-    if: matrix.buil == true
+    if: matrix.build == true
 
     permissions:
       contents: read

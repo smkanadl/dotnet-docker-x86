@@ -9,9 +9,21 @@ env:
 
 
 jobs:
-  build-net60-servercore-2019:
+  build:
+    strategy:
+      matrix:
+        include:
+          - sdk: 6.0
+            sdkFull: 6.0.408
+            image: windowsservercore-ltsc2019
+            runner: windows-2019
+          - sdk: 6.0
+            sdkFull: 6.0.408
+            image: windowsservercore-ltsc2022
+            runner: windows-2022
 
-    runs-on: windows-2019
+    runs-on: ${{ matrix.runner }}
+
     permissions:
       contents: read
       packages: write
@@ -28,8 +40,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push Docker image
+      - name: Build and push Docker image ${{ matrix.sdk }}-${{ matrix.image }}
         run: |
-          docker build ${{ github.workspace }}/src/sdk/6.0/windowsservercore-ltsc2019/amd64 --tag ghcr.io/smkanadl/sdk:6.0-windowsservercore-ltsc2019-x86 --tag ghcr.io/smkanadl/sdk:6.0.408-windowsservercore-ltsc2019-x86
-          docker push ghcr.io/smkanadl/sdk:6.0-windowsservercore-ltsc2019-x86
-          docker push ghcr.io/smkanadl/sdk:6.0.408-windowsservercore-ltsc2019-x86
+          docker build ${{ github.workspace }}/src/sdk/${{ matrix.sdk }}/${{ matrix.image }}/amd64 --tag ghcr.io/smkanadl/sdk:${{ matrix.sdk }}-${{ matrix.image }}-x86 --tag ghcr.io/smkanadl/sdk:${{ matrix.sdkFull }}-${{ matrix.image }}-x86
+          docker push ghcr.io/smkanadl/sdk:${{ matrix.sdk }}-${{ matrix.image }}-x86
+          docker push ghcr.io/smkanadl/sdk:${{ matrix.sdkFull }}-${{ matrix.image }}-x86

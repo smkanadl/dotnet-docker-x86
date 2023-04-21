@@ -30,6 +30,6 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build${{ github.workspace }}/src/sdk/6/windowsservercore-ltsc2019/amd64 --tag ghcr.io/smkanadl/sdk:6.0-windowsservercore-ltsc2019-x86 --tag ghcr.io/smkanadl/sdk:6.0.408-windowsservercore-ltsc2019-x86
+          docker build ${{ github.workspace }}/src/sdk/6/windowsservercore-ltsc2019/amd64 --tag ghcr.io/smkanadl/sdk:6.0-windowsservercore-ltsc2019-x86 --tag ghcr.io/smkanadl/sdk:6.0.408-windowsservercore-ltsc2019-x86
           docker push ghcr.io/smkanadl/sdk:6.0-windowsservercore-ltsc2019-x86
           docker push ghcr.io/smkanadl/sdk:6.0.408-windowsservercore-ltsc2019-x86

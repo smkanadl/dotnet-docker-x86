@@ -17,12 +17,20 @@ jobs:
             sdkFull: '6.0.408'
             image: windowsservercore-ltsc2019
             runner: windows-2019
+            build: false
           - sdk: '6.0'
             sdkFull: '6.0.408'
             image: windowsservercore-ltsc2022
             runner: windows-2022
+            build: false
+          - sdk: '7.0'
+            sdkFull: '7.0.203'
+            image: windowsservercore-ltsc2022
+            runner: windows-2022
+            build: true
 
     runs-on: ${{ matrix.runner }}
+    if: matrix.buil == true
 
     permissions:
       contents: read
@@ -33,7 +41,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Log into registry ${{ env.REGISTRY }}
-        if: github.event_name != 'pull_request'
         uses: docker/login-action@v2
         with:
           registry: ${{ env.REGISTRY }}

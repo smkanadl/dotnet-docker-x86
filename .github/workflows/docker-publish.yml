@@ -30,7 +30,6 @@ jobs:
             build: true
 
     runs-on: ${{ matrix.runner }}
-    if: ${{ matrix.build == 'true' }}
 
     permissions:
       contents: read
@@ -38,9 +37,11 @@ jobs:
 
     steps:
       - name: Checkout repository
+        if: matrix.build == true
         uses: actions/checkout@v3
 
       - name: Log into registry ${{ env.REGISTRY }}
+        if: matrix.build == true
         uses: docker/login-action@v2
         with:
           registry: ${{ env.REGISTRY }}
@@ -48,6 +49,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker image ${{ matrix.sdk }}-${{ matrix.image }}
+        if: matrix.build == true
         run: |
           docker build ${{ github.workspace }}/src/sdk/${{ matrix.sdk }}/${{ matrix.image }}/amd64 --tag ghcr.io/smkanadl/sdk:${{ matrix.sdk }}-${{ matrix.image }}-x86 --tag ghcr.io/smkanadl/sdk:${{ matrix.sdkFull }}-${{ matrix.image }}-x86
           docker push ghcr.io/smkanadl/sdk:${{ matrix.sdk }}-${{ matrix.image }}-x86

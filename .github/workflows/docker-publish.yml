@@ -24,20 +24,20 @@ jobs:
             runner: windows-2022
             build: false
           - sdk: '6.0'
-            sdkFull: '6.0.408'
+            sdkFull: '6.0.410'
             image: windowsservercore-ltsc2019
             runner: windows-2019
-            build: false
+            build: true
           - sdk: '6.0'
-            sdkFull: '6.0.408'
+            sdkFull: '6.0.410'
             image: windowsservercore-ltsc2022
             runner: windows-2022
-            build: false
+            build: true
           - sdk: '7.0'
-            sdkFull: '7.0.203'
+            sdkFull: '7.0.304'
             image: windowsservercore-ltsc2022
             runner: windows-2022
-            build: false
+            build: true
 
     runs-on: ${{ matrix.runner }}
 

@@ -24,17 +24,17 @@ jobs:
             runner: windows-2022
             build: false
           - sdk: '6.0'
-            sdkFull: '6.0.412'
+            sdkFull: '6.0.414'
             image: windowsservercore-ltsc2019
             runner: windows-2019
             build: true
           - sdk: '6.0'
-            sdkFull: '6.0.412'
+            sdkFull: '6.0.414'
             image: windowsservercore-ltsc2022
             runner: windows-2022
             build: true
           - sdk: '7.0'
-            sdkFull: '7.0.306'
+            sdkFull: '7.0.401'
             image: windowsservercore-ltsc2022
             runner: windows-2022
             build: true

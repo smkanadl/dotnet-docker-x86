@@ -69,4 +69,3 @@ jobs:
           docker build ${{ github.workspace }}/src/sdk/${{ matrix.sdk }}/${{ matrix.image }}/amd64 --tag ghcr.io/smkanadl/sdk:${{ matrix.sdk }}-${{ matrix.image }}-x86 --tag ghcr.io/smkanadl/sdk:${{ matrix.sdkFull }}-${{ matrix.image }}-x86
           docker push ghcr.io/smkanadl/sdk:${{ matrix.sdk }}-${{ matrix.image }}-x86
           docker push ghcr.io/smkanadl/sdk:${{ matrix.sdkFull }}-${{ matrix.image }}-x86
-7

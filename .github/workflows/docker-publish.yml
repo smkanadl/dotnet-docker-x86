@@ -18,10 +18,20 @@ jobs:
             image: windowsservercore-ltsc2022
             runner: windows-2022
             build: true
+          - sdk: '3.1'
+            sdkFull: '3.1.426'
+            image: windowsservercore-ltsc2022
+            runner: windows-2025
+            build: true
           - sdk: '5.0'
             sdkFull: '5.0.408'
             image: windowsservercore-ltsc2022
             runner: windows-2022
+            build: true
+          - sdk: '5.0'
+            sdkFull: '5.0.408'
+            image: windowsservercore-ltsc2025
+            runner: windows-2025
             build: true
           - sdk: '6.0'
             sdkFull: '6.0.428'
@@ -33,20 +43,39 @@ jobs:
             image: windowsservercore-ltsc2022
             runner: windows-2022
             build: true
+          - sdk: '6.0'
+            sdkFull: '6.0.428'
+            image: windowsservercore-ltsc2025
+            runner: windows-2025
+            build: true
           - sdk: '7.0'
             sdkFull: '7.0.410'
             image: windowsservercore-ltsc2022
             runner: windows-2022
+            build: true
+          - sdk: '7.0'
+            sdkFull: '7.0.410'
+            image: windowsservercore-ltsc2025
+            runner: windows-2025
             build: true
           - sdk: '8.0'
             sdkFull: '8.0.408'
             image: windowsservercore-ltsc2022
             runner: windows-2022
             build: true
+            sdkFull: '8.0.406'
+            image: windowsservercore-ltsc2025
+            runner: windows-2025
+            build: true
           - sdk: '9.0'
             sdkFull: '9.0.203'
             image: windowsservercore-ltsc2022
             runner: windows-2022
+            build: true
+          - sdk: '9.0'
+            sdkFull: '9.0.200'
+            image: windowsservercore-ltsc2025
+            runner: windows-2025
             build: true
 
     runs-on: ${{ matrix.runner }}

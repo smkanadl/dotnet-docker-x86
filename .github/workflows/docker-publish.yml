@@ -63,7 +63,7 @@ jobs:
             image: windowsservercore-ltsc2022
             runner: windows-2022
             build: true
-            sdkFull: '8.0.406'
+            sdkFull: '8.0.408'
             image: windowsservercore-ltsc2025
             runner: windows-2025
             build: true
@@ -73,7 +73,7 @@ jobs:
             runner: windows-2022
             build: true
           - sdk: '9.0'
-            sdkFull: '9.0.200'
+            sdkFull: '9.0.203'
             image: windowsservercore-ltsc2025
             runner: windows-2025
             build: true

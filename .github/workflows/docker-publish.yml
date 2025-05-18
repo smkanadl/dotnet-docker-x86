@@ -17,65 +17,70 @@ jobs:
             sdkFull: '3.1.426'
             image: windowsservercore-ltsc2022
             runner: windows-2022
-            build: true
+            build: false
           - sdk: '3.1'
             sdkFull: '3.1.426'
             image: windowsservercore-ltsc2022
             runner: windows-2025
-            build: true
+            build: false
           - sdk: '5.0'
             sdkFull: '5.0.408'
             image: windowsservercore-ltsc2022
             runner: windows-2022
-            build: true
+            build: false
           - sdk: '5.0'
             sdkFull: '5.0.408'
             image: windowsservercore-ltsc2025
             runner: windows-2025
-            build: true
+            build: false
           - sdk: '6.0'
             sdkFull: '6.0.428'
             image: windowsservercore-ltsc2019
             runner: windows-2019
-            build: true
+            build: false
           - sdk: '6.0'
             sdkFull: '6.0.428'
             image: windowsservercore-ltsc2022
             runner: windows-2022
-            build: true
+            build: false
           - sdk: '6.0'
             sdkFull: '6.0.428'
             image: windowsservercore-ltsc2025
             runner: windows-2025
-            build: true
+            build: false
           - sdk: '7.0'
             sdkFull: '7.0.410'
             image: windowsservercore-ltsc2022
             runner: windows-2022
-            build: true
+            build: false
           - sdk: '7.0'
             sdkFull: '7.0.410'
             image: windowsservercore-ltsc2025
             runner: windows-2025
-            build: true
+            build: false
           - sdk: '8.0'
             sdkFull: '8.0.408'
             image: windowsservercore-ltsc2022
             runner: windows-2022
-            build: true
+            build: false
           - sdk: '8.0'
             sdkFull: '8.0.408'
             image: windowsservercore-ltsc2025
             runner: windows-2025
-            build: true
+            build: false
           - sdk: '9.0'
             sdkFull: '9.0.203'
             image: windowsservercore-ltsc2022
             runner: windows-2022
-            build: true
+            build: false
           - sdk: '9.0'
             sdkFull: '9.0.203'
             image: windowsservercore-ltsc2025
+            runner: windows-2025
+            build: false
+          - sdk: '9.0'
+            sdkFull: '9.0.300'
+            image: nanoserver-ltsc2025
             runner: windows-2025
             build: true
 

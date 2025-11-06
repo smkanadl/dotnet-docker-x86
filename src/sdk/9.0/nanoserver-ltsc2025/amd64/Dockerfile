@@ -21,7 +21,7 @@ RUN powershell -Command `
 # Customize nanoserver to have x86 support
 # https://techcommunity.microsoft.com/blog/containers/discover-the-new-era-of-windows-server-2025-nano-server-containers/4413060
 # https://github.com/microsoft/Windows-Containers/issues/118
-FROM mcr.microsoft.com/windows/nanoserver:ltsc2025-amd64
+FROM mcr.microsoft.com/windows/nanoserver@sha256:c3b971bb70457cf9d579f1f026db19f1f34113c2394623d844462b36dbba82be
 LABEL org.opencontainers.image.source="https://github.com/smkanadl/dotnet-docker-x86"
 
 COPY install_wow64_support.cmd .

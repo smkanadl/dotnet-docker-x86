@@ -103,6 +103,11 @@ jobs:
             image: nanoserver-ltsc2025
             runner: windows-2025
             build: true
+          - sdk: '10.0'
+            sdkFull: '10.0.100'
+            image: nanoserver-ltsc2025
+            runner: windows-2025
+            build: true
 
     runs-on: ${{ matrix.runner }}
 
